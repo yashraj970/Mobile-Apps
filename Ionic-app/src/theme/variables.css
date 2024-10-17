@@ -1,0 +1,10 @@
+/* For information on how to create your own theme, please see:
+http://ionicframework.com/docs/theming/ */
+
+/* Dark  */
+.light-theme {
+  --text-primary: #000000;
+  --text-secondary: #858e96;
+  --background-primary: #fbfcfd;
+  --background-secondary: #ffffff;
+}
