@@ -28,7 +28,7 @@ import {
 import "../../main.css";
 
 function DisplaySettings() {
-  const [paletteToggle, setPaletteToggle] = useState(false);
+  const [paletteToggle, setPaletteToggle] = useState(true);
 
   // Listen for the toggle check/uncheck to toggle the dark palette
   const toggleChange = (ev: ToggleCustomEvent) => {
