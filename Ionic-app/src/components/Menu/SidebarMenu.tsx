@@ -76,9 +76,9 @@ function Sidebar() {
               <IonIcon slot="start" icon={informationCircleOutline} />
               <IonLabel>About</IonLabel>
             </IonItem>
-            <IonItem routerLink="/contact" routerDirection="none">
+            <IonItem routerLink="/display" routerDirection="none">
               <IonIcon slot="start" icon={callOutline} />
-              <IonLabel>Contact</IonLabel>
+              <IonLabel>Display Settings</IonLabel>
             </IonItem>
           </IonList>
         </IonContent>
