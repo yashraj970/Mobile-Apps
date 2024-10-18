@@ -19,6 +19,7 @@ import {
   callOutline,
 } from "ionicons/icons";
 import { useLocation } from "react-router";
+import ToggleDarkmode from "../ToggleDarkmode/ToggleDarkmode";
 
 function Sidebar() {
   const location = useLocation();
@@ -90,11 +91,7 @@ function Sidebar() {
           </IonButtons>
           <IonTitle>{getTitle()}</IonTitle>
 
-          <IonToggle
-            slot="end"
-            checked={darkMode}
-            onIonChange={(e) => toggleDarkMode(e)}
-          />
+          <ToggleDarkmode />
         </IonToolbar>
       </IonHeader>
     </>
