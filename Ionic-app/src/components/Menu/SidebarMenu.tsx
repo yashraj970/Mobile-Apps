@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import {
   IonMenu,
   IonHeader,
@@ -11,7 +10,6 @@ import {
   IonLabel,
   IonButtons,
   IonMenuButton,
-  IonToggle,
 } from "@ionic/react";
 import {
   homeOutline,
