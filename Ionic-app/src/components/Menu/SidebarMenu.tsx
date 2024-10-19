@@ -23,28 +23,6 @@ import ToggleDarkmode from "../ToggleDarkmode/ToggleDarkmode";
 
 function Sidebar() {
   const location = useLocation();
-  const [darkMode, setDarkMode] = useState<boolean>(false);
-
-  // Check if dark mode was saved in localStorage
-  useEffect(() => {
-    const isDark = window.localStorage.getItem("darkMode") === "true";
-    setDarkMode(isDark);
-    if (isDark) {
-      document.body.classList.add("light-theme");
-    }
-  }, []);
-
-  // Toggle dark mode and update class on body
-  const toggleDarkMode = (e: CustomEvent) => {
-    setDarkMode(e.detail.checked);
-    if (e.detail.checked) {
-      document.body.classList.add("light-theme");
-      window.localStorage.setItem("darkMode", "true");
-    } else {
-      document.body.classList.remove("light-theme");
-      window.localStorage.setItem("darkMode", "false");
-    }
-  };
 
   // Determine title based on current route
   const getTitle = () => {
