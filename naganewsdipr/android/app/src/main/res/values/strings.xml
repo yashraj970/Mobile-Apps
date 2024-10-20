@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">DIPR Nagaland</string>
+    <string name="title_activity_main">DIPR Nagaland</string>
+    <string name="package_name">in.gov.nagaland.ipr</string>
+    <string name="custom_url_scheme">in.gov.nagaland.ipr</string>
+</resources>
