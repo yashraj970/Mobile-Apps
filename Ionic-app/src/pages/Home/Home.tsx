@@ -21,13 +21,13 @@ const Home: React.FC = () => {
         <IonToolbar>
           <IonTitle>Tab 1</IonTitle>
         </IonToolbar>
-        <TopTabs />
       </IonHeader>
+        <TopTabs />
 
-      <IonContent fullscreen>
+      {/* <IonContent fullscreen>
         <Modal />
-      </IonContent>
-      <IonSearchbar placeholder="Placeholder"></IonSearchbar>
+      </IonContent> */}
+      {/* <IonSearchbar placeholder="Placeholder"></IonSearchbar> */}
     </IonPage>
   );
 };
