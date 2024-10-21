@@ -7,7 +7,6 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import React from "react";
-import HomeNewsList from "./home-news-list/home-news-list";
 import HomePhotoNews from "./home-news/HomePhotoNews";
 import HomeVideoNews from "./home-news/HomeVideoNews";
 
@@ -22,8 +21,7 @@ const Home: React.FC = () => {
 
       <IonSearchbar placeholder="Search" />
 
-      {/* <HomeNewsList newstype={"photonews"} /> */}
-      {/* <HomePhotoNews /> */}
+      <HomePhotoNews />
       {/* <HomeVideoNews /> */}
     </IonPage>
   );
