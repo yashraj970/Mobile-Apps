@@ -16,7 +16,6 @@ import {
 const About: React.FC = () => {
   return (
     <IonPage>
-      {/* Header with Menu Button and Dark Mode Toggle */}
       <IonHeader>
         <IonToolbar className="background-secondary">
           <IonTitle>About DIPR</IonTitle>
