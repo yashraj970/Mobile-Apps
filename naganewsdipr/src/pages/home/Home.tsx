@@ -16,6 +16,7 @@ const Home: React.FC = () => {
           <IonTitle>Home</IonTitle>
         </IonToolbar>
       </IonHeader>
+      
       <IonContent>
         <IonSearchbar placeholder="Search" />
       </IonContent>
