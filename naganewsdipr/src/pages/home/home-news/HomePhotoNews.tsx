@@ -9,11 +9,13 @@ import {
   IonImg,
   IonInfiniteScroll,
   IonInfiniteScrollContent,
+  IonButton,
 } from "@ionic/react";
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { getPhotoNews } from "../../../services/nagaNewsService";
 import { environment } from "../../../environments/environment";
+import styles from "./HomeNews.module.css";
 
 interface NewsItem {
   field_blog_image?: string;
@@ -73,9 +75,10 @@ const HomePhotoNews: React.FC = () => {
                   <p className="text-size-xs text-color-primary font-regular custom-padding-bottom">
                     {item.title}
                   </p>
-                  <span className="text-size-xs text-color-secondary font-regular">
+                  {/* <span className={styles.photonewsDate}></span> */}
+                  <IonButton color="dark">
                     {new Date(item.created).toLocaleDateString()}
-                  </span>
+                  </IonButton>
                 </IonCardContent>
               </IonCard>
             </IonCol>
