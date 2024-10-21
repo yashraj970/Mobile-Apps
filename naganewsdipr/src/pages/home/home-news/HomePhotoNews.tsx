@@ -13,6 +13,7 @@ import {
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { getPhotoNews } from "../../../services/nagaNewsService";
+import { environment } from "../../../environments/environment";
 
 interface NewsItem {
   field_blog_image?: string;
@@ -65,7 +66,7 @@ const HomePhotoNews: React.FC = () => {
               >
                 <IonCardHeader className="ion-no-padding ion-margin-bottom" />
                 <IonImg
-                  src={item.field_blog_image}
+                  src={environment.baseurl + item.field_blog_image}
                   hidden={!item.field_blog_image}
                 />
                 <IonCardContent className="ion-no-padding">
