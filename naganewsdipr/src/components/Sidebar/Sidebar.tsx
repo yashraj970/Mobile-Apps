@@ -11,20 +11,26 @@ import {
   IonButtons,
   IonMenuButton,
 } from "@ionic/react";
-import {
-  homeOutline,
-  informationCircleOutline,
-} from "ionicons/icons";
+import { homeOutline, informationCircleOutline } from "ionicons/icons";
 import { useLocation } from "react-router";
 import ToggleDarkmode from "../Darkmode/ToggleDarkmode";
-
+const menu = [
+  { icon: homeOutline, name: "Home", url: "/home" },
+  { icon: informationCircleOutline, name: "About DIPR", url: "/about-us" },
+  { icon: "", name: "Naga News", url: "/tabs/home/news-list/naganews" },
+  { icon: "", name: "Photo News", url: "/tabs/home/news-list/photonews" },
+  { icon: "", name: "Video News", url: "/tabs/home/news-list/videonews" },
+  { icon: "", name: "Publications", url: "/tabs/pdf-section" },
+  { icon: "", name: "Advertisement", url: "/tabs/advertisement" },
+  { icon: "", name: "Covid 19", url: "/tabs/covid-19" },
+];
 function Sidebar() {
   const location = useLocation();
 
   // Determine title based on current route
   const getTitle = () => {
     switch (location.pathname) {
-      case "/about-dipr":
+      case "/about-us":
         return "About DIPR";
       case "/home":
         return "Home";
@@ -44,14 +50,18 @@ function Sidebar() {
         </IonHeader>
         <IonContent>
           <IonList>
-            <IonItem routerLink="/home" routerDirection="none">
-              <IonIcon slot="start" icon={homeOutline} />
-              <IonLabel>Home</IonLabel>
-            </IonItem>
-            <IonItem routerLink="/about-dipr" routerDirection="none">
-              <IonIcon slot="start" icon={informationCircleOutline} />
-              <IonLabel>About DIPR</IonLabel>
-            </IonItem>
+            <IonList>
+              {menu.map((item, index) => (
+                <IonItem
+                  key={index}
+                  routerLink={item.url}
+                  routerDirection="none"
+                >
+                  {item.icon && <IonIcon slot="start" icon={item.icon} />}
+                  <IonLabel>{item.name}</IonLabel>
+                </IonItem>
+              ))}
+            </IonList>
           </IonList>
         </IonContent>
       </IonMenu>
