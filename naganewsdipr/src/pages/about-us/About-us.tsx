@@ -17,7 +17,7 @@ const About: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar className="background-secondary">
+        <IonToolbar>
           <IonTitle>About DIPR</IonTitle>
         </IonToolbar>
       </IonHeader>
