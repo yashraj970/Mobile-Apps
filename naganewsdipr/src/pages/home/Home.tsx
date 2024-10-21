@@ -9,6 +9,7 @@ import {
 import React from "react";
 import HomePhotoNews from "./home-news/HomePhotoNews";
 import HomeVideoNews from "./home-news/HomeVideoNews";
+import HomeNagaNews from "./home-news/HomeNagaNews";
 
 const Home: React.FC = () => {
   return (
@@ -21,7 +22,8 @@ const Home: React.FC = () => {
       <IonContent>
         <IonSearchbar placeholder="Search" />
 
-        <HomePhotoNews />
+        {/* <HomePhotoNews /> */}
+        <HomeNagaNews />
         {/* <HomeVideoNews /> */}
       </IonContent>
     </IonPage>
